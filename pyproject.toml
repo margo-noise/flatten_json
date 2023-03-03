@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "flatten_json"
+version = "0.1.0"
+description = ""
+authors = ["margo-noise <margo.stn@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+flake8 = "^6.0.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+flatten_json = "flatten_json.flatten_json:main"

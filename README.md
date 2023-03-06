@@ -10,3 +10,18 @@ git clone https://github.com/margo-noise/flatten_json.git
 cd flatten_json
 poetry install
 ```
+### Usage
+1. From command line:
+```commandline
+usage: FlattenJSON [-h] [-d DELIMITER] [-r] filename outfile
+
+positional arguments:
+  filename                  Input json file 
+  outfile                   Output json file
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -d DELIMITER, --delimiter 
+                        key separator (default='.')
+  -r, --recursive       use recursive solution
+```

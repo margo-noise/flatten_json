@@ -4,7 +4,7 @@
 
 import json
 import argparse
-from flatten_json import solution
+from flatten_json import flatteners
 
 
 def create_parser():
@@ -34,9 +34,9 @@ def main() -> None:
     nested_json = read_file(parser.filename)
 
     if parser.recursive is True:
-        flat_json = solution.flatten_data_recursive_solution(nested_json, parser.delimiter)
+        flat_json = flatteners.flatten_data_recursive_solution(nested_json, parser.delimiter)
     else:
-        flat_json = solution.flatten_data_iterative_solution(nested_json, parser.delimiter)
+        flat_json = flatteners.flatten_data_iterative_solution(nested_json, parser.delimiter)
 
     write_file(flat_json, parser.outfile)
 

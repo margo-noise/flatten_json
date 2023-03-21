@@ -10,6 +10,10 @@ git clone https://github.com/margo-noise/flatten_json.git
 cd flatten_json
 poetry install
 ```
+or install as python package
+```shell
+pip3 install --upgrade git+https://github.com/margo-noise/flatten_json
+```
 ### Usage
 1. From command line:
 ```commandline

@@ -1,10 +1,10 @@
 from itertools import chain, starmap
+from typing import Optional
 
-
-def flatten_data_recursive_solution(data, delimiter):
+def flatten_data_recursive_solution(data: dict, delimiter='.') -> dict:
     flat_json = {}
 
-    def flatten(x, name=''):
+    def flatten(x: Optional[dict], name: str=''):
         if isinstance(x, dict):
             for key, value in x.items():
                 flatten(value, name + key + delimiter)
@@ -20,7 +20,7 @@ def flatten_data_recursive_solution(data, delimiter):
     return flat_json
 
 
-def flatten_data_iterative_solution(data, delimiter):
+def flatten_data_iterative_solution(data: dict, delimiter: str='.') -> dict:
 
     def unpack_one_level(parent_key, parent_value):
         if isinstance(parent_value, dict):
